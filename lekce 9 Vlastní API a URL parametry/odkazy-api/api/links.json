@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "URL": "https://www.seznam.cz",
+    "name": "Seznam",
+    "description": "Nejlepší český vyhledávač",
+    "type": "web"
+  },
+  {
+    "id": 2,
+    "URL": "https://www.youtube.com",
+    "name": "YouTube",
+    "description": "Největší platforma pro sdílení videa",
+    "type": "video"
+  },
+  {
+    "id": 3,
+    "URL": "https://www.facebook.com",
+    "name": "Facebook",
+    "description": "Nejlepší socialni sit",
+    "type": "web"
+  },
+  {
+    "id": 4,
+    "URL": "https://www.facebook.com",
+    "name": "Facebook",
+    "description": "Nejlepší socialni sit",
+    "type": "web"
+  }
+]
