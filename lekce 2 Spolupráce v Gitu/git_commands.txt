@@ -1,0 +1,31 @@
+Práce s historií repozitáře
+
+git log - klasické zobrazení historie verzí
+
+git log --graph - zobrazení historie v ASCII grafice (vhodné pro zobrazení merge větví)
+
+git log --oneline - úsporné zobrazení historie
+
+git stash - uložení aktuálně provedených změn mimo hlavní pracovní oblast bez nutnosti commitu, což umožňuje přepnout větve nebo obnovit úložiště do původního stavu.
+
+git pull - stáhnutí změn z vzdáleného repozitáře a sloučení s aktuální větví, což aktualizuje pracovní kopii.
+
+git stash list - zobrazení seznamu všech uložených změn (stashů), což umožňuje zvolit, které změny chcete obnovit nebo smazat.
+
+git stash pop - obnovení změn uložených nejnovějším příkazem git stash, přičemž tyto změny jsou odstraněny ze seznamu uložených změn.
+
+git stash clear - odstranění všech uložených změn ve stash seznamu, což čistí historii dočasně uložených změn.
+
+git pull --no-rebase - stáhnutí změn z vzdáleného repozitáře a sloučení s aktuální větví bez použití rebase, čímž se zachová historie commitů jak byla.
+
+git branch - zobrazení seznamu všech místních větví v repozitáři. Použití s názvem větve vytvoří novou větev.
+
+git branch -d [název větve] - smazání specifikované větve, pokud byla již sloučena s aktuální větví.
+
+git branch -D [název větve] - nucené smazání specifikované větve, bez ohledu na to, zda byla sloučena.
+
+git checkout [název větve] - přepnutí na zadanou větev. Tento příkaz změní hlavu (HEAD) repozitáře na zvolenou větev.
+
+git checkout -b [název větve] - vytvoření nové větve a ihned přepnutí na ni.
+
+git merge [název větve] - sloučení změn ze specifikované větve do aktuální větve. Řeší konflikty mezi větvemi a integruje změny.
