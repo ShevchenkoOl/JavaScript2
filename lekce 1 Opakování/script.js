@@ -127,3 +127,4 @@
 //   };
 
 //   validateCharacters('123č56q8y7');
+
