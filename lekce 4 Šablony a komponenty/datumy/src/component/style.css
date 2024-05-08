@@ -1,0 +1,11 @@
+.container {
+    font-family: Arial, sans-serif;
+  }
+  
+  .day {
+    font-weight: bold; /* Делаем номер дня жирным */
+  }
+  
+  .year {
+    font-size: 80%; /* Уменьшаем размер шрифта для номера года на 20% */
+  }
