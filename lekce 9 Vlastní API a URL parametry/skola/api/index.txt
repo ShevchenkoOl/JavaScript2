@@ -1,0 +1,62 @@
+// index.jsx
+
+import { render } from '@czechitas/render';
+import '../global.css';
+import './index.css';
+
+const response = await fetch("http://localhost:4000/api/movies")
+const json = await response.json()
+const movies = json.data
+
+const handleMovie = async () => {
+  const movie = {
+    name: "Pan prstenu",
+    rok: 1990,
+    ikonickaHlasla: "Muj milasek"
+  }
+
+  await fetch("http://localhost:4000/api/movies", {
+    method: "POST", 
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(movie)
+  })
+
+  window.location.reload()
+}
+
+document.querySelector('#root').innerHTML = render(
+  <>
+    {
+      movies.map((item) => (
+        <div key={item.id}><a href={`movie.html?id=${item.id}`}>{item.name} - {item.rok}</a></div>
+      ))
+    }
+
+    <button id="addMovie">Pridej film</button>
+  </>
+);
+
+document.querySelector("#addMovie").addEventListener("click", handleMovie)
+
+
+
+//movie.jsx
+import { render } from '@czechitas/render';
+import '../global.css';
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id');
+
+const response = await fetch(`http://localhost:4000/api/movies/${id}`)
+const json = await response.json()
+const movies = json.data
+
+document.querySelector('#root').innerHTML = render(
+    <>
+      <h1>{movies.name}</h1>
+      <p>Rok: {movies.rok}</p>
+      <p>Ikonicka hlaska: <i>{movies.ikonickaHlasla}</i></p>
+    </>
+);

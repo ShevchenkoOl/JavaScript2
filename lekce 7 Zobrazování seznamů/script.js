@@ -42,7 +42,6 @@ const roll = () => Math.floor(Math.random() * 6) + 1;
 //------------------------zkracena verze
 const getNumber = (id) => Number(document.querySelector(`#${id}`).value);
 
-
 // const weather = (temperature) => {
 //     if (temperature > 16) {
 //       return 'teplo';
